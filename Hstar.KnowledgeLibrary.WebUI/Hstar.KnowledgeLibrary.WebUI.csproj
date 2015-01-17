@@ -132,6 +132,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\WebApi\KnowledgeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -194,6 +195,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\angular\angular.js" />
+    <Content Include="Scripts\angular\angular.min.js" />
+    <Content Include="Scripts\angular\controllers\HomeIndex.js" />
+    <Content Include="Scripts\angular\filters\TitleCaseFilter.js" />
     <Content Include="Scripts\bootstrap3\css\bootstrap-theme.css.map" />
     <Content Include="Scripts\bootstrap3\css\bootstrap.css.map" />
     <Content Include="Scripts\bootstrap3\fonts\glyphicons-halflings-regular.eot" />
@@ -207,6 +212,8 @@
     <Content Include="Scripts\bootstrap3\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\bootstrap3\js\bootstrap.js" />
     <Content Include="Scripts\bootstrap3\js\bootstrap.min.js" />
+    <Content Include="Scripts\ie8extension\html5shiv.min.js" />
+    <Content Include="Scripts\ie8extension\respond.min.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -239,10 +246,25 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Scripts\angular\directives\" />
+    <Folder Include="Scripts\angular\services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hstar.Framework\Hstar.Framework.csproj">
+      <Project>{ec184622-d99e-46fd-8da3-ba3885ca27c7}</Project>
+      <Name>Hstar.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hstar.KnowledgeLibrary.Business\Hstar.KnowledgeLibrary.Business.csproj">
+      <Project>{1d0a53cc-dd8b-45e0-8881-e1fb47979cc2}</Project>
+      <Name>Hstar.KnowledgeLibrary.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hstar.KnowledgeLibrary.Model\Hstar.KnowledgeLibrary.Model.csproj">
+      <Project>{1f563189-6e44-4551-bfe2-cf94d61da2c7}</Project>
+      <Name>Hstar.KnowledgeLibrary.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

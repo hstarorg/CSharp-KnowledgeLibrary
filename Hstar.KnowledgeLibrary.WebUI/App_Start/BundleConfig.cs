@@ -32,6 +32,9 @@ namespace Hstar.KnowledgeLibrary.WebUI
             bundles.Add(new ScriptBundle("~/Scripts/bootstrap").Include(
                 "~/Scripts/bootstrap3/js/bootstrap.js"));
 
+            //AngularJS
+            bundles.Add(new ScriptBundle("~/Scripts/angular").Include("~/Scripts/angular/angular.js"));
+
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
                         "~/Content/themes/base/jquery.ui.resizable.css",
