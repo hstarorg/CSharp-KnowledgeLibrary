@@ -5,16 +5,17 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const util = require('./util');
+const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 module.exports = {
   entry: {
     polyfills: util.root('src/polyfills.ts'),
-    vendor: util.root('src/vendor.ts'),
-    app: util.root('src/main.ts')
+    app: util.root('aot/dist/src/main.aot')
   },
   output: {
     path: util.root('dist'),
-    filename: '[name].js'
+    filename: '[name].[hash].js',
+    chunkFilename: '[id].[hash].chunk.js'
   },
   resolve: {
     extensions: ['.ts', '.js']
@@ -36,10 +37,22 @@ module.exports = {
   plugins: [
     new CheckerPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfills']
+      name: ['app', 'polyfills']
     }),
     new HtmlWebpackPlugin({
       template: util.root('src/index.html')
+    }),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ // https://github.com/angular/angular/issues/10618
+      mangle: {
+        keep_fnames: true
+      }
+    }),
+    new ExtractTextPlugin('[name].[hash].css'),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'ENV': JSON.stringify(ENV)
+      }
     })
   ]
 };

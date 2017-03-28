@@ -26,11 +26,5 @@ module.exports = webpackMerge(commonConfig, {
         'ENV': JSON.stringify(ENV)
       }
     })
-  ],
-  devServer: {
-    host: '0.0.0.0',
-    port: 7410,
-    historyApiFallback: true,
-    stats: 'minimal'
-  }
+  ]
 });
