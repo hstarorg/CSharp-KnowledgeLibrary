@@ -4,7 +4,7 @@
   "description": "cloud note",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.dev.conf.js --inline --progress",
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
     "build": "webpack --config build/webpack.prod.conf.js",
     "ngc": "ngc -p tsconfig-aot.json",
     "aot:rollup": "npm run ngc && rollup -c build/rollup-config.js",
@@ -37,11 +37,12 @@
     "@angular/platform-server": "^4.0.0",
     "@angular/router": "4.0.0",
     "core-js": "^2.4.1",
+    "normalize.css": "^6.0.0",
     "rxjs": "5.2.0",
     "zone.js": "0.8.5"
   },
   "devDependencies": {
-    "@types/node": "^7.0.12",
+    "@types/core-js": "^0.9.39",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.1.2",
     "css-loader": "^0.27.3",

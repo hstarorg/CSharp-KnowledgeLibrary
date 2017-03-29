@@ -15,7 +15,7 @@ module.exports = webpackMerge(commonConfig, {
     new ExtractTextPlugin('[name].css')
   ],
   devServer: {
-    host: '0.0.0.0',
+    // host: '0.0.0.0', // If need visit extenal, cancel the comment
     port: 7410,
     historyApiFallback: true,
     stats: 'minimal',

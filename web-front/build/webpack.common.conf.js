@@ -12,6 +12,22 @@ module.exports = {
     vendor: util.root('src/vendor.ts'),
     app: util.root('src/main.ts')
   },
+  // stats: { // 定制日志
+  //   colors: true,
+  //   hash: false,
+  //   timings: true,
+  //   chunks: true,
+  //   chunkModules: false,
+  //   modules: false,
+  //   children: false,
+  //   version: true,
+  //   cached: true,
+  //   cachedAssets: true,
+  //   reasons: false,
+  //   source: false,
+  //   errorDetails: false
+  // },
+  stats: 'minimal',
   output: {
     path: util.root('dist'),
     filename: '[name].js'
@@ -23,7 +39,7 @@ module.exports = {
     rules: [
       {
         test: /.ts$/, use: [
-          { loader: 'awesome-typescript-loader', options: { configFileName: util.root('build/tsconfig.json') } },
+          { loader: 'awesome-typescript-loader', options: { configFileName: util.root('tsconfig.json') } },
           'angular2-template-loader'
         ], exclude: /node_modules/
       },
