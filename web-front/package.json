@@ -1,7 +1,7 @@
 {
   "name": "easy-note-web",
-  "version": "0.0.1",
-  "description": "cloud note",
+  "version": "0.1.0",
+  "description": "easy note front project",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
@@ -16,7 +16,10 @@
     "url": "git+https://github.com/hstarorg/easy-note.git"
   },
   "keywords": [
-    "Note"
+    "Markdown",
+    "RickEditor",
+    "Note",
+    "UI"
   ],
   "author": "Jay.M.Hu",
   "license": "MIT",

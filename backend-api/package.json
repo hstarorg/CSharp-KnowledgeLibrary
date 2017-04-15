@@ -1,0 +1,25 @@
+{
+  "name": "easy-note-api",
+  "version": "0.1.0",
+  "description": "easy note api project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hstarorg/easy-note.git"
+  },
+  "keywords": [
+    "Markdown",
+    "RickEditor",
+    "Note",
+    "API"
+  ],
+  "author": "Jay.M.Hu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hstarorg/easy-note/issues"
+  },
+  "homepage": "https://github.com/hstarorg/easy-note#readme"
+}
