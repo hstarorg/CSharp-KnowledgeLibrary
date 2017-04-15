@@ -4,6 +4,7 @@
   "description": "easy note api project",
   "main": "index.js",
   "scripts": {
+    "dev": "gulp4",
     "test": "test"
   },
   "repository": {
@@ -21,5 +22,15 @@
   "bugs": {
     "url": "https://github.com/hstarorg/easy-note/issues"
   },
-  "homepage": "https://github.com/hstarorg/easy-note#readme"
+  "homepage": "https://github.com/hstarorg/easy-note#readme",
+  "devDependencies": {
+    "gulp-develop-server": "^0.5.2",
+    "gulp4": "^4.0.1",
+    "node-notifier": "^5.1.2",
+    "shelljs": "^0.7.7"
+  },
+  "dependencies": {
+    "nedb": "^1.8.0",
+    "rest-express": "^1.2.0"
+  }
 }
