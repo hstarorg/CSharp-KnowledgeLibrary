@@ -12,6 +12,9 @@ npm i
 # Run develop env
 npm run dev
 
+# Run with hot reload
+npm run dev:hot
+
 # Build
 npm run build
 

@@ -40,7 +40,8 @@ module.exports = {
       {
         test: /.ts$/, use: [
           { loader: 'awesome-typescript-loader', options: { configFileName: util.root('tsconfig.json') } },
-          'angular2-template-loader'
+          'angular2-template-loader',
+          './build/ng-hot-replacement-loader'
         ], exclude: /node_modules/
       },
       { test: /\.html$/, use: 'html-loader' },

@@ -20,6 +20,8 @@ cd web-front
 npm i
 # run
 npm run dev
+# run with hot reload
+npm run dev:hot
 
 # develop backend-api 
 # enter folder, init dependencies and run
